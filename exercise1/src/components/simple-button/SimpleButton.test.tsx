@@ -1,9 +1,9 @@
 import React from 'react';
 import { SimpleButton } from './SimpleButton';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 test('Test if button contain name from props', () => {
-    const enzymeRenderedComponent = mount(<SimpleButton name='test-name' />);
+    const enzymeRenderedComponent = shallow(<SimpleButton name='test-name' />);
     const button = enzymeRenderedComponent.find('button');
     expect(button.contains('test-name')).toBeTruthy();
 });
